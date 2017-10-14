@@ -4,16 +4,16 @@
 
 ## Tasks
 
-- [ ] 1. Ознакомиться со ссылками учебного материала
-- [ ] 2. Выполнить инструкцию учебного материала
-- [ ] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Ознакомиться со ссылками учебного материала
+- [x] 2. Выполнить инструкцию учебного материала
+- [x] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
  
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=NovikovAnton  # Установка значения GITHUB_USERNAME
+$ export GIST_TOKEN=ed6ebf8eeab8380b6a08c95e60a0a6fef28c91f3  # Установка значения GIST_TOKEN
+$ alias edit=vim  # Настройка текстового редактора
 ```
 
 ```bash
@@ -29,23 +29,23 @@ EOF
 ```
 
 ```bash
-$ cd ~
-$ mkdir -p workspace/labs/projects/
-$ mkdir -p workspace/labs/tasks/
-$ mkdir -p workspace/labs/reports/
+$ cd ~ # Переход в домашнюю папку
+$ mkdir -p workspace/labs/projects/ # Создание папки projects
+$ mkdir -p workspace/labs/tasks/ # Создание папки tasks
+$ mkdir -p workspace/labs/reports/ # Создание папки reports
 ```
 
 ## Report
 
 ```bash
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=02
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
-$ gistup -m "lab${LAB_NUMBER}"
+$ cd ~/workspace/labs/ # Переход в папку labs
+$ export LAB_NUMBER=02 # Установка значения LAB_NUMBER
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Скачиваем с сайта
+$ mkdir reports/lab${LAB_NUMBER} # Создаем папку lab02
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем файл README.md в папку lab02 под новым именем с расширением .md
+$ cd reports/lab${LAB_NUMBER} # Переход в папку lab02
+$ edit REPORT.md # Редактируем файл
+$ gistup -m "lab${LAB_NUMBER}" # Коммит "lab02"
 ```
 
 ## Links
